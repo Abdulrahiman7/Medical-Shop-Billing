@@ -1,0 +1,43 @@
+button{
+    background-color: white;
+    color:darkblue;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: lightblue;
+}
+button:active{
+    transform: scale(1.1);
+}
+.header button{
+    height: 30px;
+    width: 100px;
+}
+.medicine-items .card button{
+    height: 20px;
+    background-color: lightblue;
+    color: darkblue;
+    border: none;
+}
+.cart-items .card button{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(117, 17, 17);
+    color: white;
+    margin-left: 10px;
+
+}
+.addMedicine form button{
+    height: 20px;
+    background-color: lightblue;
+    color: darkblue;
+    border: none;
+    width: 50%;
+    transform: translateX(50%);
+}
+.addMedicine button{
+    background-color: brown;
+    color:white;
+    width: 20%;
+    float: right;
+}

@@ -1,0 +1,13 @@
+.addMedicine{
+    display: flex;
+    flex-direction: column;
+}
+.addMedicine form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5px;
+    justify-items: center;
+    width: 100%;
+   
+}
