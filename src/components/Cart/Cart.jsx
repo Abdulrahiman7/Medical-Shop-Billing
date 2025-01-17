@@ -26,6 +26,7 @@ const Cart = (props) => {
           </ul>
         </div>
         <h2>TotalPrice:{totalPrice}</h2>
+        <Button>Order</Button>
         <Button onClick={props.closeCartModal}>close</Button>
     </Modal>
     

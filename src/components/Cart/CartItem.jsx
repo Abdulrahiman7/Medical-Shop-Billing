@@ -14,7 +14,7 @@ const CartItem = (props) => {
     }
     const decrementButtonHandler=()=>{
         if(itemQuantity === 1) {
-            removeFromCart(props.item);
+            removeFromCart(props.item._id);
             return;
         }
         setItemQuantity((prev)=>prev-1);

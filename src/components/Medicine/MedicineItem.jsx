@@ -3,14 +3,16 @@ import Card from '../UI/Card'
 import Button from '../UI/Button';
 import CartContext from '../../store/cart-context';
 import "./MedicineItem.css"
+import axios from 'axios'
+import MedicineContext from '../../store/medicines-context';
+
 const MedicineItem = (props) => {
    const {addToCart}=useContext(CartContext);
-   const addToCartHandler=()=>{
-  
- 
-    console.log(props.item);
-    const item={...props.item, cartQuantity:1}
-    addToCart(item);
+   const {updateTotalQuantity}=useContext(MedicineContext);
+   const addToCartHandler= ()=>{
+      const item={...props.item, quantity:props.item.quantity-1, cartQuantity:1}
+      updateTotalQuantity(item);
+      addToCart(item);
    }
   return (
     <li>
@@ -20,7 +22,7 @@ const MedicineItem = (props) => {
             <h3>  ${props.item.price}</h3>
 
             <p>{props.item.description}</p>
-
+            <p>quantity available:{props.item.quantity}</p>
             <Button onClick={addToCartHandler}>Add +</Button>
 
         </Card>
